@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+:root {
+    /* <<<<<Colors>>>>> */
+    --bg:#FFF9EB;
+    --surface:#FFFFFF;
+    --primary:#5E7A73;
+    --secondary:#9FB2AC;
+    --text:#1F2937;
+    --text2:#2D3748;
+
+    /* <<<<<Fonts>>>>> */
+    --body-font: "Alien Block", sans-serif;
+    --normal-font: 1rem;
+    --big-font: 1.5rem;
+    --small-font: .810rem
+}
+
+@media screen and (width >= 1150px) {
+    :root {
+        --normal-font: 1rem;
+        --big-font: 2.25rem;
+        --small-font: .870rem;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body, input, button {
+    font-family: var(--body-font);
+    font-size: var(--normal-font);
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-weight: 600;
+}
+
+input, button {
+    border: none;
+    outline: none;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.login {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    margin-inline: 1rem;
+}
+
+.login_img {
+    display: none;
+}
+
+.login_content {
+    box-shadow: rgba(0, 0, 0, 0.467) 0 1px 14px;
+    padding: 3.5rem 1.5rem;
+    border-radius: 1rem;
+    background-color: var(--surface);
+}
+
+
+
+
+
+
+
