@@ -28,7 +28,7 @@ tl.fromTo(
         scaleX: .2,
         scaleY: .5,
         opacity: 1,
-        duration: 1,
+        duration: .8,
         ease: 'power3.out'
     }, '-=0.3'
 )
@@ -38,7 +38,7 @@ tl.to (
     '.container',
     {
         scaleY: 1,
-        duration: .6,
+        duration: .4,
         ease: 'power3.out'
     }
 )
@@ -54,6 +54,6 @@ tl.to(
 )
 
 /* animate form */
-gsap.defaults({opacity: 0, y: -60, ease: 'power2.out', duration: 1.2})
-gsap.from('.login_title', {delay:1.5})
-gsap.from('.login_form > *:not(.login_title)', {delay: 1.7, stagger: .2})
+gsap.defaults({opacity: 0, y: -60, ease: 'power2.out', duration: .4})
+gsap.from('.login_title', {delay:1.3})
+gsap.from('.login_form > *:not(.login_title)', {delay: 1.5, stagger: .2})
