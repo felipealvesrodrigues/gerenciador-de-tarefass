@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+:root {
+    /* <<<<<Colors>>>>> */
+    --bg:#FFF9EB;
+    --surface:#FFFFFF;
+    --primary:#5E7A73;
+    --secondary:#9FB2AC;
+    --text:#1F2937;
+    --text2:#6B7280;
+
+    /* <<<<<Fonts>>>>> */
+    --body-font: "Plus Jakarta Sans", sans-serif;
+    --normal-font: 1rem;
+    --big-font: 1.5rem;
+    --small-font: .810rem;
+    --smaller-font: .750rem
+}
+
+@media screen and (width >= 1150px) {
+    :root {
+        --normal-size-font: 1rem;
+        --big-font: 2.25rem;
+        --small-font: .870rem;
+        --smaller-font: .810rem
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--body-font);
+}
+
+body {
+    background-color: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container{
+    background-color: var(--surface);
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.329) 0 5px 15px;
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+.container p {
+    font-size: var(--normal-size-font);
+    line-height: 20px;
+    letter-spacing: .3px;
+    margin: 20px 0;
+}
+
+.container span {
+    font-size: var(--smaller-font);
+}
+
+.container a {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: var(--small-font);
+    margin: 15px 0 10px;
+}
+
+.container button {
+    background-color: var(--primary);
+    color: var(--surface);
+    font-size: var(--smaller-font);
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: .7px;
+}
+
