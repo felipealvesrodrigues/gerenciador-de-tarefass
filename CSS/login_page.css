@@ -7,6 +7,7 @@
     --surface:#FFFFFF;
     --primary:#5E7A73;
     --secondary:#9FB2AC;
+    --tertiary:#d9e2de88;
     --text:#1F2937;
     --text2:#6B7280;
 
@@ -43,6 +44,7 @@ body {
     height: 100vh;
 }
 
+/* Main container */
 .container{
     background-color: var(--surface);
     border-radius: 30px;
@@ -54,6 +56,11 @@ body {
     min-height: 480px;
 }
 
+.container h1 {
+    color: var(--text);
+}
+
+/* Wellcome back and hello */
 .container p {
     font-size: var(--normal-size-font);
     line-height: 20px;
@@ -61,6 +68,7 @@ body {
     margin: 20px 0;
 }
 
+/* Create account and hello */
 .container span {
     font-size: var(--smaller-font);
 }
@@ -81,5 +89,121 @@ body {
     border-radius: 8px;
     font-weight: 600;
     letter-spacing: .7px;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
+/* wellcome back and hello */
+.container button.hidden{
+    background-color: transparent;
+    border-color: var(--surface);
+}
+
+/* crate accont and sign in */
+.container form { 
+    background-color: var(--surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+/* Create account and sign in */
+.container input {
+    background-color: var(--tertiary);
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: var(--small-font);
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+/* Encompass every section */
+.form_container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all .6s ease-in-out;
+}
+
+/* sit's the form_container, but only the sign in part */
+.sign_in {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.container.active .sign_in {
+    transform: translateX(100%);
+}
+
+/* it's the form_container, but only the sign up part */
+.sign_up{
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.container.active .sign_up {
+    transform:translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move .6s;
+}
+
+@keyframes move {
+    0%, 49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.social_icons {
+    margin: 20px 0;
+}
+
+.social_icons a {
+    border: 1px solid var(--secondary);
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+}
+
+.toggle_container {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: all .6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+
+.container.active .toggle_container {
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+.toggle {
+    background-color: var(--primary);
+    height: 100%;
+    color: var(--text);
+    position: relative;
+    left: -100%;
+
+}
