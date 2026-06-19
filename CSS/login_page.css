@@ -14,6 +14,7 @@
     /* <<<<<Fonts>>>>> */
     --body-font: "Plus Jakarta Sans", sans-serif;
     --normal-font: 1rem;
+    --bigger-font: 2rem;
     --big-font: 1.5rem;
     --small-font: .810rem;
     --smaller-font: .750rem
@@ -58,11 +59,14 @@ body {
 
 .container h1 {
     color: var(--text);
+    font-size: var(--bigger-font);
 }
 
 /* Wellcome back and hello */
 .container p {
     font-size: var(--normal-size-font);
+    color: var(--secondary);
+    font-size: var(--normal-font);
     line-height: 20px;
     letter-spacing: .3px;
     margin: 20px 0;
@@ -185,8 +189,8 @@ body {
 .toggle_container {
     position: absolute;
     top: 0;
-    left: 100%;
-    width: 100%;
+    left: 50%;
+    width: 50%;
     height: 100%;
     overflow: hidden;
     transition: all .6s ease-in-out;
@@ -199,11 +203,46 @@ body {
     border-radius: 0 150px 100px 0;
 }
 
+/* Welcome back and Hello sections. Change what's on top of the text.  */
 .toggle {
     background-color: var(--primary);
     height: 100%;
     color: var(--text);
     position: relative;
     left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all .6s ease-in-out;
+}
+
+.container.active .toggle {
+    transform: translateX(50%);
+}
+
+/* Hello section */
+.toggle_panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform:translateX(0);
+    transition: all .6s ease-in-out;
+}
+
+/* Wellcome back */
+.toggle_left {
+    transform: translateX(-200%);
+}
+
+.toggle_right {
+    right: 0;
+    transform: translateX(0);
 
 }
